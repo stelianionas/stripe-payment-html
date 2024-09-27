@@ -9,7 +9,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     background: url("../images/hero.png");
@@ -231,10 +231,6 @@ main img {
 
 main div button:hover {
     background-color: #29435E;
-}
-
-::-webkit-scrollbar {
-   width: 0;
 }
 
 @media screen and (max-width: 1110px) {
