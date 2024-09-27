@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+    transition-duration: 0.15s;
+}
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+header .hamburger {
+    display: none;
+}
+
+header .hamburger #burger-lines {
+    width: 45px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .hamburger #burger-lines .line {
+    background-color: #FFFFFF;
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+}
+
+header .hamburger .active .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+
+header .hamburger .active .line:nth-child(2) {
+    display: none;
+}
+
+header .hamburger .active .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 6px;
+}
+
+header .hamburger #burger-menu {
+    position: absolute;
+    background-color: #EEEEEE;
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    left: 0;
+    transition: left 0.5s ease;
+    margin-top: 30px;
+    align-items: center;
+}
+
+header .hamburger #burger-menu span {
+    width: 100%;
+    height: 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: #000000;
+    font-size: 130%;
+    transition-duration: 0.12s;
+    cursor: pointer;
+    user-select: none;
+    padding-right: 10%;
+}
+
+header .hamburger #burger-menu span:hover {
+    background-color: #CCCCCC;
+}
+
+header .hamburger #burger-menu span:active {
+    background-color: #AAAAAA;
+}
+
+header img {
+    width: 80px;
+    user-select: none;
+}
+
+header nav {
+    display: flex;
+    gap: 40px;
+    user-select: none;
+    position: relative;
+}
+
+header nav span {
+    color: #FFFFFF;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+}
+
+header nav span:hover {
+    color: #DDDDDD;
+}
+
+header nav span .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15%;
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 200px;
+}
+
+header nav span .dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav span .dropdown a:hover {
+    background-color: #DDDDDD;
+}
+
+header nav span:hover .dropdown,
+header nav span .dropdown:hover {
+    display: block;
+}
+
+header nav span .dropdown a img {
+    width: 20px;
+    height: 20px;
+}
+
+header button {
+    padding: 7px 20px;
+    background-color: #FFFFFF;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #9062E6;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+}
+
+header button:hover {
+    background-color: #DDDDDD;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+    margin-top: 30px;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main div h1 {
+    font-weight: 900;
+    color: #001F3E;
+    font-size: 80px;
+    line-height: 90px;
+}
+
+main div p {
+    color: #425466;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+main div button {
+    width: 130px;
+    height: 37px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #0A2540;
+    color: #FFFFFF;
+    cursor: pointer;
+    user-select: none;
+}
+
+main img {
+    user-select: none;
+}
+
+main div button:hover {
+    background-color: #29435E;
+}
+
+::-webkit-scrollbar {
+   width: 0;
+}
+
+@media screen and (max-width: 1110px) {
+    header nav {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    header button {
+        display: none;
+    }
+
+    main div h1 {
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    main img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    main img {
+        display: none;
+    }
+
+    main div h1 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main div h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+}
